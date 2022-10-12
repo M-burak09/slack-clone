@@ -1,5 +1,5 @@
 <template lang="">
-    <main class="bg-primary-color text-secondary-color"> 
+    <main class="bg-primary-color text-secondary-color w-full "> 
         <h1>This is the main block</h1>
     </main>
 </template>
