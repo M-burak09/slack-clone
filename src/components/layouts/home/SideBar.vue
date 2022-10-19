@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import ListBlock from '../ui/ListBlock.vue'
+import ListBlock from '../../ui/ListBlock.vue'
 export default {
     components:{
         ListBlock,
