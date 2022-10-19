@@ -14,12 +14,14 @@ import NavBar from './components/layouts/NavBar.vue';
 import MainBlock from './components/layouts/MainBlock.vue';
 import '@/assets/tailwind.css';
 
+
 export default {
   name: 'App',
   components: {
     SideBar,
     NavBar,
     MainBlock,
+    
   }
 }
 </script>
