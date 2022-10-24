@@ -5,12 +5,13 @@
         <font-awesome-icon :icon="['fas', 'xmark']" class="-ml-6 my-auto"/>
         <font-awesome-icon :icon="['far', 'circle-question']" class="my-auto ml-8"/>
         <button @click="handleSignOut" v-if={isLoggendIn}> Sign out </button>
+        <h2>test: {{user}}</h2>
 
     </section>
 </template>
-<script setup>  
+<script setup> 
  
-  import {onMounted, ref} from "vue";
+    import {onMounted, ref} from "vue";
     import {getAuth, onAuthStateChanged, signOut} from "firebase/auth";
     import {useRouter} from 'vue-router'
 
@@ -34,7 +35,14 @@
         router.push("/login")
     });
     }
-  
+
+    const auths = getAuth();
+    const user = auths.currentUser;
+    console.log(user)
+    if (user !== null) {
+      const email = user.email;
+      console.log(email)
+    }
 
   </script>
 <style lang="">
