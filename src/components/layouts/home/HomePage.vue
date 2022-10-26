@@ -1,6 +1,6 @@
 <template>
     <NavBar :function="handleSignOut" isLoggedIn="isLoggedIn"/>
-    <section class="md:flex">
+    <section class="sm:flex">
       <SideBar/>
       <MainBlock/>
     </section>
@@ -18,4 +18,5 @@
       NavBar,
       MainBlock,
     }
-  }</script>
+  }
+  </script>

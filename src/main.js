@@ -4,7 +4,7 @@ import './assets/tailwind.css'
 import {createRouter, createWebHistory} from 'vue-router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
-import { faClock,faCircleQuestion } from '@fortawesome/free-regular-svg-icons'
+import { faClock,faCircleQuestion,faPaperPlane } from '@fortawesome/free-regular-svg-icons'
 import Register from './components/layouts/authentication/RegisterUser.vue'
 import Login from './components/layouts/authentication/LoginUser.vue'
 import HomePage from './components/layouts/home/HomePage.vue'
@@ -27,7 +27,7 @@ const firebaseConfig = {
 // Initialize Firebase
 initializeApp(firebaseConfig);
 
-library.add(faXmark,faClock, faCircleQuestion)
+library.add(faXmark,faClock, faCircleQuestion, faPaperPlane)
 
 const router = createRouter({
     history: createWebHistory(),
