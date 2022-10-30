@@ -1,6 +1,6 @@
 <template lang="">
-    <details open class="p-4 pt-2">
-        <summary class="py-2">{{title}}</summary>
+    <details open class="pt-2">
+        <summary class="py-2 px-4">{{title}}</summary>
         <ul>
             <slot></slot>
         </ul>

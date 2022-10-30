@@ -1,11 +1,10 @@
 <template lang="">
     <div>
         <ListBlock title="Apps"> 
-            <ListItem class="hover:bg-tertiary-color">Slackbot</ListItem>
-            <ListItem class="hover:bg-tertiary-color">Google Calendar</ListItem>
-            <ListItem class="hover:bg-tertiary-color">Google Drive</ListItem>
-            <ListItem class="hover:bg-tertiary-color">Simple Poll</ListItem>
-            <ListItem class="hover:bg-tertiary-color">Zoom</ListItem>
+            <ListItem class="flex"><img class="w-6 h-6 rounded-md ml-[1px] mr-2" src="./../../../assets/calendar.png">Google Calendar</ListItem>
+            <ListItem class="flex"><img class="w-6 h-6 rounded-md ml-[1px] mr-2" src="./../../../assets/poll.png">Simple Poll</ListItem>
+            <ListItem class="flex"><img class="w-6 h-6 rounded-md ml-[1px] mr-2" src="./../../../assets/drive.png">Google Drive</ListItem>
+            <ListItem class="flex"><img class="w-6 h-6 rounded-md ml-[1px] mr-2" src="./../../../assets/zoom.png">Zoom</ListItem>
         </ListBlock>  
 
     </div>

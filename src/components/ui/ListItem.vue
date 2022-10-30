@@ -1,5 +1,5 @@
 <template lang="">
-    <li class="hover:bg-tertiary-color"> 
+    <li class="hover:bg-tertiary-color px-2 pb-1"> 
         <slot></slot>
     </li>
 </template>
