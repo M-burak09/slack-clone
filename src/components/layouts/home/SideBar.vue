@@ -4,26 +4,30 @@
             <span>Hogeschool Leiden</span>
         </div>
             <div class="hover:overflow-y-scroll">
-            <div class="border-y border-quartinary-color p-4">
+            <div class="border-y border-quartinary-color py-4 pl-2">
                 <ul>
-                    <li>Mentions & reactions</li>
-                    <li>Drafts & sent</li>
-                    <li>Slack Connect</li>
-                    <li>More</li>
+                    <li> <font-awesome-icon :icon="['fas', 'at']" class="w-6"/> Mentions & reactions </li>
+                    <li> <font-awesome-icon :icon="['far', 'paper-plane']" class="w-6"/> Drafts & sent </li>
+                    <li> <font-awesome-icon :icon="['far', 'building']" class="w-6"/> Slack Connect </li>
+                    <li> <font-awesome-icon :icon="['fas', 'ellipsis-vertical']" class="w-6"/> More </li>
                 </ul>
             </div>
-            <ListBlock title='Channel'/>
-            <ListBlock title='Direct messages'/>
-            <ListBlock title='Apps'/>
+            <ChannelList/>
+            <DMList/>
+            <AppsList/>
         </div>
     </section>
 </template>
 
 <script>
-import ListBlock from '../../ui/ListBlock.vue'
+import ChannelList from '../sidebar/ChannelList.vue';
+import DMList from '../sidebar/DMList.vue'
+import AppsList from '../sidebar/AppsList.vue'
 export default {
     components:{
-        ListBlock,
+        ChannelList,
+        DMList,
+        AppsList
     }
 }
 </script>

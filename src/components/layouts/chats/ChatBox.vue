@@ -3,7 +3,6 @@
         <ul class="overflow-y-scroll h-full" ref="el" id="el">
             <li v-for="msg in messages" :key="msg.name" class="flex mb-2">
                 <img :src="msg.img" alt="" class="w-10 h-10  mr-2 rounded-md">
-                <!-- <img :src="'./../../../assets' + msg.img" alt=""> -->
                 <div>
                     <div class="flex">
                         <p class="font-bold text-white mr-2">{{msg.name}}</p>

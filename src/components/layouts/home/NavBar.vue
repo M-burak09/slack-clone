@@ -5,7 +5,7 @@
         <font-awesome-icon :icon="['fas', 'xmark']" class="-ml-6 my-auto"/>
         <font-awesome-icon :icon="['far', 'circle-question']" class="my-auto ml-8"/>
         <button @click="handleSignOut" v-if={isLoggendIn}> Sign out </button>
-        <h2>test: {{user}}</h2>
+        <!-- <h2>test: {{user}}</h2> -->
 
     </section>
 </template>
