@@ -1,7 +1,7 @@
 <template lang="">
     <div>
         <ListBlock title="Channel"> 
-            <ListItem ><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1" /><p @click="channelChange" v:model="channel">General</p></ListItem>
+            <ListItem ><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1" />General</ListItem>
             <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Random</ListItem>
             <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Help</ListItem>
             <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Test</ListItem>
