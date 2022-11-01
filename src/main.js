@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import {createStore} from 'vuex';
 import './assets/tailwind.css'
 import {createRouter, createWebHistory} from 'vue-router'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -38,7 +39,18 @@ const router = createRouter({
     ] 
 });
 
-createApp(App)
+const store = createStore({
+    state() {
+        return{
+            channel: 'General',
+            user: ''
+        }
+    }
+});
+
+const app = createApp(App)
+app
+    .use(store)
     .component('font-awesome-icon', FontAwesomeIcon)
     .use(router)
     .mount('#app')

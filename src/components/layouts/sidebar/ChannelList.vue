@@ -1,11 +1,11 @@
 <template lang="">
     <div>
         <ListBlock title="Channel"> 
-            <ListItem ><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1" />General</ListItem>
-            <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Random</ListItem>
-            <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Help</ListItem>
-            <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Test</ListItem>
-            <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Yes</ListItem>
+            <!-- <ListItem @click="channelChange()" ref="test">General</ListItem> -->
+            <ListItem @click="channelChange(channel)" v-for="channel in channelList" :key="channel"><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>{{channel}}</ListItem>
+            <!-- <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Help</ListItem> -->
+            <!-- <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Test</ListItem> -->
+            <!-- <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Yes</ListItem> -->
         </ListBlock>  
 
     </div>
@@ -13,21 +13,21 @@
 <script>
 import ListBlock from '../../ui/ListBlock.vue';
 import ListItem from '../../ui/ListItem.vue';
-// import {ref} from "vue"
+
 export default {
     components:{
         ListBlock,
         ListItem,
     },
-    data(){
-        // channelName: ''
+    data() {
+        return{
+            channelList: ['General', 'Random', 'Help', 'Test', 'Yes']
+        }
     },
-    mounted() {
-            // console.log(this.$refs.channel)
-        },
     methods:{
-        channelChange(){
-            console.log(this.$refs.test)
+        channelChange(channel){
+            console.log(channel)
+            this.$store.state.channel = channel
         }
     }
 
@@ -36,3 +36,4 @@ export default {
 <style lang="">
     
 </style>
+
