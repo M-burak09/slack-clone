@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <main class="bg-primary-color text-secondary-color w-full relative"> 
         <div class="border-y border-quartinary-color p-4 flex">
             <h2 clas="">{{$store.state.channel}}</h2>
@@ -38,6 +38,3 @@
         
     }
 </script>
-<style lang="">
-    
-</style>

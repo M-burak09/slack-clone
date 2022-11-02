@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <details open class="pt-2">
         <summary class="py-2 px-4 cursor-pointer">{{title}}</summary>
         <ul class="cursor-pointer">
@@ -13,6 +13,3 @@ export default {
   }
 }
 </script>
-<style lang="">
-    
-</style>

@@ -1,15 +1,4 @@
-<template lang="">
-    <!-- <section>
-        <h1>Login to account</h1>
-        <input type="email" placeholder="Email" v-model="email">
-        <input type="password" placeholder="Password" v-model="password">
-        <p v-if="errMsg">{{errMsg}}</p>
-        <button @click="register">Login</button>
-        <router-link to="/" custom v-slot="{ navigate }">
-            <span @click="navigate" @keypress.enter="navigate" role="link" class="cursor-pointer">No account? Sign up instead</span>
-        </router-link>
-    </section> -->
-
+<template>
     <section class="bg-primary-color h-[100vh] text-white w-full">
         <div class="bg-quartinary-color h-[50vh] w-[40vw] m-auto translate-y-[50%] p-4">
             <h1 class="text-2xl text-center mt-4 mb-8">Login to account</h1>
@@ -60,6 +49,3 @@ const register = () => {
 };
 
 </script>
-<style lang="">
-    
-</style>

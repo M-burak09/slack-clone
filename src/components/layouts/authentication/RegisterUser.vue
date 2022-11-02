@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <section class="bg-primary-color h-[100vh] text-white w-full">
         <div class="bg-quartinary-color h-[50vh] w-[40vw] m-auto translate-y-[50%] p-4">
             <h1 class="text-2xl text-center mt-4 mb-8">Create an account</h1>
@@ -33,6 +33,3 @@ const register = () => {
         });
 };
 </script>
-<style lang="">
-    
-</style>

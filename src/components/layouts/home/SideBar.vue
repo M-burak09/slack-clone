@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <section class="bg-primary-color text-secondary-color w-64 border-solid border border-quartinary-color h-[95vh] select-none">
         <div class="p-4">
             <span>Hogeschool Leiden</span>
@@ -35,7 +35,3 @@ export default {
     }
 }
 </script>
-
-<style lang="">
-    
-</style>

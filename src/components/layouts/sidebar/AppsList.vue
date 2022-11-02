@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div>
         <ListBlock title="Apps"> 
             <ListItem class="flex"><img class="w-6 h-6 rounded-md ml-[1px] mr-2" src="./../../../assets/calendar.png">Google Calendar</ListItem>
@@ -19,6 +19,3 @@ export default {
     }
 }
 </script>
-<style lang="">
-    
-</style>

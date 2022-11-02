@@ -1,7 +1,7 @@
-<template lang="">
+<template>
     <div>
         <ListBlock title="Channel"> 
-            <ListItem @click="channelChange(channel)" v-for="channel in channelList" :key="channel"><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>{{channel.name}}</ListItem>
+            <ListItem @click="channelChange(channel)" v-for="channel in channelList" :key="channel"><font-awesome-icon :icon="channel.img" class="w-7 mr-1"/>{{channel.name}}</ListItem>
         </ListBlock>  
 
     </div>
@@ -17,7 +17,8 @@ export default {
     },
     data() {
         return{
-            channelList: this.$store.state.channels
+            channelList: this.$store.state.channels,
+            dms: this.$store.state.dms
         }
     },
     methods:{
@@ -30,7 +31,3 @@ export default {
 
 }
 </script>
-<style lang="">
-    
-</style>
-

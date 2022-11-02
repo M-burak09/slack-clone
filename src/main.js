@@ -42,7 +42,7 @@ const router = createRouter({
 const store = createStore({
     state() {
         let dataChannels = [
-            {name:'General', messages: [
+            {name:'General', img: ['fas', 'hashtag'], messages: [
                 {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', time: '9:21'},
                 {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.', time: '9:22'},
                 {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ', time:'9:23'},
@@ -57,20 +57,20 @@ const store = createStore({
                 {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'Lorem ipsum dolor sit amet!', time: '11:01'},
                 {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos', time: '12:36'},
             ]}, 
-            {name:'Random', messages :[
+            {name:'Random', img: ['fas', 'hashtag'], messages :[
                 {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?', time: '10:50'},                
                 {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'Lorem ipsum dolor sit amet!', time: '11:01'},
             ]}, 
-            {name:'Help', messages :[
+            {name:'Help', img: ['fas', 'hashtag'], messages :[
                 
             ]}, 
-            {name:'HSL', messages :[
+            {name:'HSL', img: ['fas', 'hashtag'], messages :[
                 {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'in voluptate velit esse cillum ed do consectetur adipiscing', time: '10:24'},
                 {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?', time: '10:50'},                
                 {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'Lorem ipsum dolor sit amet!', time: '11:01'},
                 {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos', time: '12:36'},
             ]}, 
-            {name:'Ikfram', messages :[
+            {name:'Ikfram', img: ['fas', 'hashtag'], messages :[
                 {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'reprehenderit in eiusmod :)', time: '9:28'},
             ]}]
 

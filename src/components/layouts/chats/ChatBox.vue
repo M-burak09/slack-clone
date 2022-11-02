@@ -1,6 +1,6 @@
-<template lang="">
+<template>
     <div class="pl-4 h-[80vh]">
-        <ul class="overflow-y-scroll h-full" ref="el" id="el">
+        <ul class="overflow-y-scroll h-full" ref="chat">
             <li v-for="msg in $store.state.messages" :key="msg.name" class="flex mb-2">
                 <img :src="msg.img" alt="" class="w-10 h-10  mr-2 rounded-md">
                 <div>
@@ -36,11 +36,8 @@ export default {
         }
     },
     updated(){            
-        var elem = document.getElementById("el");
-        elem.scrollTop = elem.clientHeight;
+        const chat = this.$refs.chat
+        chat.scrollTop = chat.clientHeight;
         },
 }
 </script>
-<style lang="">
-    
-</style>

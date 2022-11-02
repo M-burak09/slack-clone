@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <li class="hover:bg-tertiary-color px-2 pb-1"> 
         <slot></slot>
     </li>
@@ -8,6 +8,3 @@ export default {
     
 }
 </script>
-<style lang="">
-    
-</style>
