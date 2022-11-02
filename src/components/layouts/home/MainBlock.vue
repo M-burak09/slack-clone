@@ -14,7 +14,7 @@
     </main>
 </template>
 <script>
-    import ChatBox from './../chats/ChatBox.vue';
+    import ChatBox from './../chats/ChatBox.vue'; 
     export default {
         components:{
             ChatBox,
@@ -30,7 +30,6 @@
 
         methods: {
             addChat() {
-                // this.chat.push(this.currentChat)
                 const date = new Date();
                 this.chat.message = this.currentChat;
                 this.chat.time = date.getHours() + ":" + date.getMinutes();

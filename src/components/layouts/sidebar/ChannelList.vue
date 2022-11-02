@@ -1,11 +1,7 @@
 <template lang="">
     <div>
         <ListBlock title="Channel"> 
-            <!-- <ListItem @click="channelChange()" ref="test">General</ListItem> -->
-            <ListItem @click="channelChange(channel)" v-for="channel in channelList" :key="channel"><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>{{channel}}</ListItem>
-            <!-- <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Help</ListItem> -->
-            <!-- <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Test</ListItem> -->
-            <!-- <ListItem><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>Yes</ListItem> -->
+            <ListItem @click="channelChange(channel)" v-for="channel in channelList" :key="channel"><font-awesome-icon :icon="['fas', 'hashtag']" class="w-7 mr-1"/>{{channel.name}}</ListItem>
         </ListBlock>  
 
     </div>
@@ -21,13 +17,14 @@ export default {
     },
     data() {
         return{
-            channelList: ['General', 'Random', 'Help', 'Test', 'Yes']
+            channelList: this.$store.state.channels
         }
     },
     methods:{
         channelChange(channel){
             console.log(channel)
-            this.$store.state.channel = channel
+            this.$store.state.channel = channel.name
+            this.$store.state.messages = channel.messages
         }
     }
 

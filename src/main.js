@@ -41,8 +41,68 @@ const router = createRouter({
 
 const store = createStore({
     state() {
+        let dataChannels = [
+            {name:'General', messages: [
+                {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', time: '9:21'},
+                {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.', time: '9:22'},
+                {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ', time:'9:23'},
+                {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'sed do consectetur adipiscing.', time: '9:23'},
+                {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'reprehenderit in eiusmod :)', time: '9:28'},
+                {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'tempor...', time: '9:30'},
+                {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'reprehenderit in eiusmod :)', time: '9:31'},
+                {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?', time: '9:32'},
+                {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'Lorem ipsum aute irure dolor in reprehenderit', time: '9:36'},
+                {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'in voluptate velit esse cillum ed do consectetur adipiscing', time: '10:24'},
+                {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?', time: '10:50'},                
+                {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'Lorem ipsum dolor sit amet!', time: '11:01'},
+                {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos', time: '12:36'},
+            ]}, 
+            {name:'Random', messages :[
+                {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?', time: '10:50'},                
+                {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'Lorem ipsum dolor sit amet!', time: '11:01'},
+            ]}, 
+            {name:'Help', messages :[
+                
+            ]}, 
+            {name:'HSL', messages :[
+                {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'in voluptate velit esse cillum ed do consectetur adipiscing', time: '10:24'},
+                {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?', time: '10:50'},                
+                {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'Lorem ipsum dolor sit amet!', time: '11:01'},
+                {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos', time: '12:36'},
+            ]}, 
+            {name:'Ikfram', messages :[
+                {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message: 'reprehenderit in eiusmod :)', time: '9:28'},
+            ]}]
+
+        let dataDMs = [
+            {name:'Slackbot', img: require('./assets/slackbot.png'), messages: [
+                {name: 'Slackbot', img:require('./assets/slackbot.png'), message: 'Lorem ipsum dolor sit amet'}
+            ]},
+            {name:'Burak Kivrak', img:require('./assets/Burak.jpeg'), messages: [
+            
+            ]},
+            {name:'Jamel Guiducci', img:require('./assets/Jamel.jpg'), messages: [
+                {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', time: '9:21'},
+                {name: 'Burak Kivrak', img: require('./assets/Burak.jpeg'), message: 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.', time: '9:22'},
+                {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', time: '9:23'},
+            ]},
+            {name:'Derick Fridie', img:require('./assets/Derick.jpg'), messages: [
+                {name: 'Derick Fridie', img: require('./assets/Derick.jpg'), message:'tempor...', time: '9:30'},
+            ]},
+            {name:'Chelsie Beight', img:require('./assets/Chelsie.jpg'), messages: [
+                {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'do eiusmod tempor incididunt', time: '10:30'},
+                {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'tempor...', time: '10:38'},
+                {name: 'Burak Kivrak', img: require('./assets/Burak.jpeg'), message: 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.', time: '11:22'},
+                {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'dolor sit amet', time: '12:20'},
+
+            ]},
+        ]
         return{
+            channels: dataChannels,
+            // dms: ['Slackbot', 'Burak Kivrak', 'Jamel Guiducci', 'Derick Fridie', 'Chelsie Beight'], 
+            dms: dataDMs,
             channel: 'General',
+            messages: dataChannels[0].messages, 
             user: ''
         }
     }
