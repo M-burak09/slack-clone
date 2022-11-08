@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div>
         <ListBlock title="Direct messages"> 
             <ListItem @click="channelChange(dm)" class="flex" v-for="dm in dms" :key="dm"><img class="w-6 h-6 rounded-md ml-[1px] mr-2" :src="dm.img">{{dm.name}}</ListItem>
@@ -6,9 +6,11 @@
 
     </div>
 </template>
+
 <script>
 import ListBlock from '../../ui/ListBlock.vue';
 import ListItem from '../../ui/ListItem.vue';
+
 export default {
     components:{
         ListBlock,

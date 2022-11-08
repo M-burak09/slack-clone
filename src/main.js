@@ -1,19 +1,16 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
 import {createStore} from 'vuex';
-import './assets/tailwind.css'
-import {createRouter, createWebHistory} from 'vue-router'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faXmark, faAt,faEllipsisVertical,faHashtag } from '@fortawesome/free-solid-svg-icons'
-import { faClock,faCircleQuestion,faPaperPlane,faUser,faBuilding,faSmile } from '@fortawesome/free-regular-svg-icons'
-import Register from './components/layouts/authentication/RegisterUser.vue'
-import Login from './components/layouts/authentication/LoginUser.vue'
-import HomePage from './components/layouts/home/HomePage.vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-// Import the functions you need from the SDKs you need
+import './assets/tailwind.css';
+import {createRouter, createWebHistory} from 'vue-router';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faXmark, faAt,faEllipsisVertical,faHashtag } from '@fortawesome/free-solid-svg-icons';
+import { faClock,faCircleQuestion,faPaperPlane,faUser,faBuilding,faSmile } from '@fortawesome/free-regular-svg-icons';
+import Register from './components/layouts/authentication/RegisterUser.vue';
+import Login from './components/layouts/authentication/LoginUser.vue';
+import HomePage from './components/layouts/home/HomePage.vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -28,17 +25,19 @@ const firebaseConfig = {
 // Initialize Firebase
 initializeApp(firebaseConfig);
 
-library.add(faXmark,faClock, faCircleQuestion, faPaperPlane, faUser, faAt, faBuilding, faEllipsisVertical, faHashtag, faSmile)
 
+//routes
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/', component: Register },
-        { path: '/login', component: Login },
+        { path: '/', component: Login },
+        { path: '/register', component: Register },
         { path: '/home', component: HomePage }
     ] 
 });
 
+
+//vuex store
 const store = createStore({
     state() {
         let dataChannels = [
@@ -99,7 +98,6 @@ const store = createStore({
         ]
         return{
             channels: dataChannels,
-            // dms: ['Slackbot', 'Burak Kivrak', 'Jamel Guiducci', 'Derick Fridie', 'Chelsie Beight'], 
             dms: dataDMs,
             channel: 'General',
             messages: dataChannels[0].messages, 
@@ -108,7 +106,11 @@ const store = createStore({
     }
 });
 
-const app = createApp(App)
+//fontAwesome icons
+library.add(faXmark,faClock, faCircleQuestion, faPaperPlane, faUser, faAt, faBuilding, faEllipsisVertical, faHashtag, faSmile);
+
+// create app
+const app = createApp(App);
 app
     .use(store)
     .component('font-awesome-icon', FontAwesomeIcon)

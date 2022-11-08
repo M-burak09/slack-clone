@@ -3,3 +3,10 @@
 @tailwind components;
 
 @tailwind utilities;
+
+
+@layer components {
+    .dialog-items{
+        @apply hover:bg-sky-700 px-6 hover:text-white mb-2 cursor-pointer;
+    }
+}

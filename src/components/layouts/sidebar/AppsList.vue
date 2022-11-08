@@ -9,6 +9,7 @@
 
     </div>
 </template>
+
 <script>
 import ListBlock from '../../ui/ListBlock.vue';
 import ListItem from '../../ui/ListItem.vue';

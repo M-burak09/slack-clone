@@ -13,28 +13,12 @@
         <ChatBox/>
     </main>
 </template>
+
 <script>
     import ChatBox from './../chats/ChatBox.vue'; 
     export default {
         components:{
             ChatBox,
         },
-
-        data() {
-            return {
-                channelName: 'General',
-                currentChat: '',
-                chat: {name:'Burak Kivrak', img: require('./../../../assets/Burak.jpeg'), message: '', time: ''}
-            }
-        },
-
-        methods: {
-            addChat() {
-                const date = new Date();
-                this.chat.message = this.currentChat;
-                this.chat.time = date.getHours() + ":" + date.getMinutes();
-            }
-        }
-        
     }
 </script>

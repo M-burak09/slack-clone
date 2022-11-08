@@ -14,13 +14,10 @@
         </ul>
     </div>
 
-    <div class="m-4 bg-[#222529] border rounded-lg  border-quartinary-color p-4 absolute w-[96%] bottom-2">
-            <!-- <form @submit.prevent=""> -->      
-                <input @keyup.enter="addChat" class="bg-[#222529] focus:outline-none " v-model="currentChat" type="text" placeholder="Write a message..."/>
-                <button @click="addChat" class=" float-right"><font-awesome-icon :icon="['far', 'paper-plane']" /></button>
-            <!-- </form> -->
-        </div>
-
+    <div class="m-4 bg-[#222529] border rounded-lg  border-quartinary-color p-4 absolute w-[96%] bottom-2">    
+        <input @keyup.enter="addChat" class="bg-[#222529] focus:outline-none " v-model="currentChat" type="text" placeholder="Write a message..."/>
+        <button @click="addChat" class=" float-right"><font-awesome-icon :icon="['far', 'paper-plane']" /></button>
+    </div>
 </template>
 
 <script>
