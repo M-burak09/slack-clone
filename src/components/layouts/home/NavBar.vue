@@ -25,19 +25,20 @@
                 <font-awesome-icon :icon="['far', 'smile']" class="ml-2 mr-4"/> Update your status
             </button></div>
             <ul>
-                <li class="hover:bg-sky-700 px-6 hover:text-white mb-2 cursor-pointer">Set yourself as <b>away</b></li>
-                <li class="hover:bg-sky-700 px-6 hover:text-white -mb-2 cursor-pointer">Pause notfications</li>
-                <span class="border-b border-quartinary-color w-full inline-block cursor-pointer"></span>
-                <li class="hover:bg-sky-700 px-6 hover:text-white mb-2 cursor-pointer">Profile</li>
-                <li class="hover:bg-sky-700 px-6 hover:text-white -mb-2 cursor-pointer">Preferences</li>
-                <span class="border-b border-quartinary-color w-full inline-block cursor-pointer"></span>
-                <li class="hover:bg-sky-700 px-6 hover:text-white mt-2 cursor-pointer" @click="handleSignOut" v-if={isLoggendIn}> Sign out of Hogeschool Leiden</li>
+                <li class="dialog-items mb-2">Set yourself as <b>away</b></li>
+                <li class="dialog-items -mb-2">Pause notfications</li>
+                <span class="border-b border-quartinary-color w-full inline-block"></span>
+                <li class="dialog-items mb-2">Profile</li>
+                <li class="dialog-items -mb-2">Preferences</li>
+                <span class="border-b border-quartinary-color w-full inline-block"></span>
+                <li class="dialog-items mt-2" @click="handleSignOut" v-if={isLoggendIn}> Sign out of Hogeschool Leiden</li>
             </ul>
             
         </div>
         
     </section>
 </template>
+
 <script>
     export default{
         data(){
@@ -47,6 +48,7 @@
         },
     }
 </script>
+
 <script setup> 
     import {onMounted, ref} from "vue";
     import {getAuth, onAuthStateChanged, signOut} from "firebase/auth";
@@ -69,7 +71,7 @@
 
     const handleSignOut = () => {
     signOut(auth).then(() =>{
-        router.push("/login")
+        router.push("/")
     });
     }
 
@@ -81,4 +83,4 @@
       console.log(email)
     }
 
-  </script>
+</script>
