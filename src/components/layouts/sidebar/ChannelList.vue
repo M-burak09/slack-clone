@@ -19,12 +19,10 @@ export default {
     data() {
         return{
             channelList: this.$store.state.channels
-            // dms: this.$store.state.dms
         }
     },
     methods:{
         channelChange(channel){
-            // console.log(channel)
             this.$store.state.channel = channel.name
             this.$store.state.messages = channel.messages
         }

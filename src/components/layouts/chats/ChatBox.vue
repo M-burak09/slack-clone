@@ -24,7 +24,7 @@
 export default {
     methods: {
         addChat() {
-            const chat = {name:'Burak Kivrak', img: require('./../../../assets/Burak.jpeg'), message: '', time: ''}
+            const chat = {name: this.$store.state.username, img: this.$store.state.userpic, message: '', time: ''}
             const date = new Date();
             chat.message = this.currentChat;
             chat.time = date.getHours() + ":" + date.getMinutes();
