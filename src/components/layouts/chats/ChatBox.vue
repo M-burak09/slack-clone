@@ -1,5 +1,5 @@
 <template>
-    <div class="pl-4 h-[80vh]">
+    <div class="pl-4 h-[75vh] 3xl:h-[80vh]">
         <ul class="overflow-y-scroll h-full" ref="chat">
             <li v-for="msg in $store.state.messages" :key="msg.name" class="flex mb-2">
                 <img :src="msg.img" alt="" class="w-10 h-10  mr-2 rounded-md">
@@ -24,7 +24,7 @@
 export default {
     methods: {
         addChat() {
-            const chat = {name:'Burak Kivrak', img: require('./../../../assets/Burak.jpeg'), message: '', time: ''}
+            const chat = {name: this.$store.state.username, img: this.$store.state.userpic, message: '', time: ''}
             const date = new Date();
             chat.message = this.currentChat;
             chat.time = date.getHours() + ":" + date.getMinutes();

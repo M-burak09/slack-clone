@@ -1,16 +1,16 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import {createStore} from 'vuex';
 import './assets/tailwind.css';
+import {createStore} from 'vuex';
 import {createRouter, createWebHistory} from 'vue-router';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faXmark, faAt,faEllipsisVertical,faHashtag } from '@fortawesome/free-solid-svg-icons';
 import { faClock,faCircleQuestion,faPaperPlane,faUser,faBuilding,faSmile } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { initializeApp } from "firebase/app";
 import Register from './components/layouts/authentication/RegisterUser.vue';
 import Login from './components/layouts/authentication/LoginUser.vue';
 import HomePage from './components/layouts/home/HomePage.vue';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -36,10 +36,13 @@ const router = createRouter({
     ] 
 });
 
-
 //vuex store
 const store = createStore({
+    
     state() {
+
+        const username = 'Burak Kivrak'
+        let userpic = require('./assets/Burak.jpeg');
         let dataChannels = [
             {name:'General', img: ['fas', 'hashtag'], messages: [
                 {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', time: '9:21'},
@@ -77,12 +80,12 @@ const store = createStore({
             {name:'Slackbot', img: require('./assets/slackbot.png'), messages: [
                 {name: 'Slackbot', img:require('./assets/slackbot.png'), message: 'Lorem ipsum dolor sit amet'}
             ]},
-            {name:'Burak Kivrak', img:require('./assets/Burak.jpeg'), messages: [
+            {name: username, img: userpic, messages: [
             
             ]},
             {name:'Jamel Guiducci', img:require('./assets/Jamel.jpg'), messages: [
                 {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', time: '9:21'},
-                {name: 'Burak Kivrak', img: require('./assets/Burak.jpeg'), message: 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.', time: '9:22'},
+                {name: username, img: userpic, message: 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.', time: '9:22'},
                 {name: 'Jamel Guiducci', img: require('./assets/Jamel.jpg'), message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', time: '9:23'},
             ]},
             {name:'Derick Fridie', img:require('./assets/Derick.jpg'), messages: [
@@ -91,7 +94,7 @@ const store = createStore({
             {name:'Chelsie Beight', img:require('./assets/Chelsie.jpg'), messages: [
                 {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'do eiusmod tempor incididunt', time: '10:30'},
                 {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'tempor...', time: '10:38'},
-                {name: 'Burak Kivrak', img: require('./assets/Burak.jpeg'), message: 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.', time: '11:22'},
+                {name: username, img: userpic, message: 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.', time: '11:22'},
                 {name: 'Chelsie Beight', img: require('./assets/Chelsie.jpg'), message:'dolor sit amet', time: '12:20'},
 
             ]},
@@ -101,7 +104,9 @@ const store = createStore({
             dms: dataDMs,
             channel: 'General',
             messages: dataChannels[0].messages, 
-            user: ''
+            username: username,
+            userpic: userpic,
+            organization: 'Hogeschool Leiden'
         }
     }
 });
