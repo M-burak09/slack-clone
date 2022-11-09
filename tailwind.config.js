@@ -15,6 +15,9 @@ module.exports = {
         lato: ['"Lato"', ...defaultTheme.fontFamily.sans]
       },
     },
+    screens: {
+      '3xl': '1760px'
+    }
   },
   plugins: [],
 }

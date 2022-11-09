@@ -1,16 +1,16 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import {createStore} from 'vuex';
 import './assets/tailwind.css';
+import {createStore} from 'vuex';
 import {createRouter, createWebHistory} from 'vue-router';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faXmark, faAt,faEllipsisVertical,faHashtag } from '@fortawesome/free-solid-svg-icons';
 import { faClock,faCircleQuestion,faPaperPlane,faUser,faBuilding,faSmile } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { initializeApp } from "firebase/app";
 import Register from './components/layouts/authentication/RegisterUser.vue';
 import Login from './components/layouts/authentication/LoginUser.vue';
 import HomePage from './components/layouts/home/HomePage.vue';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {

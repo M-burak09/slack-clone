@@ -18,13 +18,14 @@ export default {
     },
     data() {
         return{
-            channelList: this.$store.state.channels
+            channelList: this.$store.state.channels,
         }
     },
     methods:{
         channelChange(channel){
             this.$store.state.channel = channel.name
             this.$store.state.messages = channel.messages
+            this.test = true
         }
     }
 
